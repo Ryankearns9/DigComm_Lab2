@@ -12,7 +12,6 @@ The following section outlines the equipment used in this lab. All equipment can
  - https://www.nooelec.com/store/nesdr-smart-xtr.html
   - Details on the specific SDR kit can be found following the attached link. Further information is contained in the Lab 1 report
 
-![alt text](https://github.com/Ryankearns9/DigComm_Lab2/blob/main/imgs/FlowDiagram.PNG)
 
 ### Software
 1. GNU Radio
@@ -25,6 +24,16 @@ This section details the specific algorithm implimented in GNU Radio. It include
 The below figure shows the overall flow diagram of the algorithm. It includes the RTL-SDR hardware, resamplers, FM Demod, low pass filter, and audio sink. Additional modules inlcude the GUI functions, GUI variables, and constants for the program. Each will be detailed throughout this section.
 ![alt text](https://github.com/Ryankearns9/DigComm_Lab2/blob/main/imgs/FlowDiagram.PNG)
 
-#### RTL-SDR Source
-The below image shows the RTL-SDR source.
+### RTL-SDR Source
+The below image shows the RTL-SDR source. The specific hardware is linked above with a full description in Lab 1. This module acts as the ADC and antenna for this module. It basebands the signal of interest with the center frequency being chosen by the GUI variable "center_freq." Further description of this variable is detailed below. The sampling rate is chosen by the constant samp_rate and is set to 2 MHz.
+
+Of note, the Nooelec NESDR SMArt XTR SDR basebands and filters the signal using the E4000 architecture. This prevents interference and aliasing from out of bandwidth signals.
+
 ![alt text](https://github.com/Ryankearns9/DigComm_Lab2/blob/main/imgs/RTL_Source.PNG)
+
+The RTL-SDR Source is fed into the first rational resampler 
+
+### Rational Resampler 1
+The below image shows the first rational resampler used in the flow chart. 
+
+![alt text](https://github.com/Ryankearns9/DigComm_Lab2/blob/main/imgs/RationalResampler.PNG)
