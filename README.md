@@ -67,3 +67,5 @@ The low pass filter feeds the FM Demod.
 
 ### Audio Sink
 ![alt text](https://github.com/Ryankearns9/DigComm_Lab2/blob/main/imgs/AudioSink.PNG)
+
+### GUI Output Description

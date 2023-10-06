@@ -73,14 +73,14 @@ class Lab2(gr.top_block, Qt.QWidget):
         self.transition_width = transition_width = 10e3
         self.samp_rate = samp_rate = 2e6
         self.channel_width = channel_width = 150e3
-        self.center_freq = center_freq = 462.5625e6
+        self.center_freq = center_freq = 92.1e6
         self.Volume = Volume = 200e-3
 
         ##################################################
         # Blocks
         ##################################################
 
-        self._center_freq_range = Range(80e6, 500e6, 100e3, 462.5625e6, 200)
+        self._center_freq_range = Range(80e6, 500e6, 100e3, 92.1e6, 200)
         self._center_freq_win = RangeWidget(self._center_freq_range, self.set_center_freq, "Center_Freq", "counter_slider", float, QtCore.Qt.Horizontal)
         self.top_layout.addWidget(self._center_freq_win)
         self._Volume_range = Range(0, 1, 50e-3, 200e-3, 200)
