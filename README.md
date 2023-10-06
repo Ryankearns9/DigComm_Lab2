@@ -53,3 +53,17 @@ The low pass filter parameters are described in the below chart. As described in
 | Transition Width | 25kHz         |
 
 ![alt text](https://github.com/Ryankearns9/DigComm_Lab2/blob/main/imgs/LowPassFilter.PNG)
+
+The low pass filter feeds the FM Demod.
+
+### FM Demod
+![alt text](https://github.com/Ryankearns9/DigComm_Lab2/blob/main/imgs/FMDemod.PNG)
+
+### Rational Resampler 2 
+![alt text](https://github.com/Ryankearns9/DigComm_Lab2/blob/main/imgs/RationalResampler2.PNG)
+
+### Multiply Constant
+![alt text](https://github.com/Ryankearns9/DigComm_Lab2/blob/main/imgs/MultiplyConst.PNG)
+
+### Audio Sink
+![alt text](https://github.com/Ryankearns9/DigComm_Lab2/blob/main/imgs/AudioSink.PNG)
