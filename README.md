@@ -79,17 +79,21 @@ While, it is commonly stated that pre-emphasis improves SNR of the signal, this 
 | Tau              | 75u           |
 
 ![alt text](https://github.com/Ryankearns9/DigComm_Lab2/blob/main/imgs/FMDemod.PNG)
+
 The FM Demod feeds into the second resampler
 
 ### Rational Resampler 2 
 The purpose of the second resampler is to prepare the data stream for output through the speakers. The speaker hardware works at 48 kHz. As a result, the output of the FM modulation must be resampled to allow for connectivity with the speakers.
+
 ![alt text](https://github.com/Ryankearns9/DigComm_Lab2/blob/main/imgs/RationalResampler2.PNG)
 
 ### Multiply Constant
 The multiply constant acts as a volume control. It accepts the GUI Range Variable "volume". It applies a multiplication value between 0 and 1 to the audio output from the frequency modulator. 
+
 ![alt text](https://github.com/Ryankearns9/DigComm_Lab2/blob/main/imgs/MultiplyConst.PNG)
 
 ### Audio Sink
+
 ![alt text](https://github.com/Ryankearns9/DigComm_Lab2/blob/main/imgs/AudioSink.PNG)
 
 ### GUI Output Description
