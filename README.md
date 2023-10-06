@@ -83,7 +83,7 @@ While, it is commonly stated that pre-emphasis improves SNR of the signal, this 
 The FM Demod feeds into the second resampler
 
 ### Rational Resampler 2 
-The purpose of the second resampler is to prepare the data stream for output through the speakers. The speaker hardware works at 48 kHz. As a result, the output of the FM modulation must be resampled to allow for connectivity with the speakers.
+The purpose of the second resampler is to prepare the data stream for output through the speakers. The speaker hardware works at 48 kHz. As a result, the output of the FM modulation must be resampled to allow for connectivity with the speakers. This scales the entire audio by a constant value resulting in the attenuation of output volume. This gives the end user fine-volume control
 
 ![alt text](https://github.com/Ryankearns9/DigComm_Lab2/blob/main/imgs/RationalResampler2.PNG)
 
@@ -92,9 +92,22 @@ The multiply constant acts as a volume control. It accepts the GUI Range Variabl
 
 ![alt text](https://github.com/Ryankearns9/DigComm_Lab2/blob/main/imgs/MultiplyConst.PNG)
 
+The output of the multiply constant is the Audio Sink
+
 ### Audio Sink
+The audio sink is the hardware speaker for the computer. It works at 48kHz and converts floating point values to voltages which vibrate a diaphram which can be heard as noise. Further details can be found in Lab 1
 
 ![alt text](https://github.com/Ryankearns9/DigComm_Lab2/blob/main/imgs/AudioSink.PNG)
 
 ### GUI Output Description
+The GUI has 3 main plots along with 2 variable controls. The below figure shows the output. The first plot is a waterfall curve and shows the entire spectrum taken at the output of the RTL-SDR. For further details on waterfall plots, reference Lab 1.
+
+The second plot is an FFT of the output of the FM Demod. It shows the Fourier Transform of the audio so you can visualize the frequencies contained within the radio station.
+
+The third plot is an FFT of the RTL-SDR output. It shows an instananeous view of the frequency domain at the output of the ADC.
+
+The two controls are for center frequency and volume. The center frequency control is fed to the RTL-SDR source to update the frequency. In this plot, it is tuned to 93.3 MHz. 
+
+The second control is for volume and it updates the Multiply Constant. It will scale the amplitude of the audio output.
+
 ![alt text](https://github.com/Ryankearns9/DigComm_Lab2/blob/main/imgs/SDRGUI.PNG)
