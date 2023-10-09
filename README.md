@@ -5,6 +5,9 @@ Lab 2's objective is to build an FM radio reciever using an SDR kit along with t
 ## Equipment List
 The following section outlines the equipment used in this lab. All equipment can be purchased following the links provided
 
+### Reference
+Lab 1: https://github.com/Ryankearns9/DigComm_Lab1
+
 ### Hardware
 1. ASUS Laptop
  - https://www.amazon.com/Performance-Premium-Processor-SuperMulti-10-Silver/dp/B01KAP7RJG
